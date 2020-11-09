@@ -32,7 +32,7 @@
       - mariadb-server
       - chrony
       - httpd
-      - mod-ssl
+      - mod_ssl
     state: installed
 
 - name: 'Install required packages - OS Version 7'
