@@ -1,0 +1,13 @@
+---
+
+- name: 'Get the composer install file'
+  get_url:
+    url: https://getcomposer.org/installer
+    dest: '{{ install.dir }}/install/install_composer'
+    owner: root
+    group: root
+    mode: 0750
+
+- name: 'Run the composer install script'
+  command: 'php {{ install.dir }}/install/install_composer'
+

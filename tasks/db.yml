@@ -55,7 +55,7 @@
     login_unix_socket: /var/lib/mysql/mysql.sock
     name: '{{ db.name }}'
     collation: utf8mb4_unicode_ci
-    encoding: utf8mb4
+    encoding: utf8
     state: present
 
 - name: 'Create db user'
