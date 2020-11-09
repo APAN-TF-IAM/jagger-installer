@@ -13,7 +13,7 @@
 
 - name: 'Copy in the index.php file'
   copy:
-    name: '{{ install.dir }}/index.php'
+    dest: '{{ install.dir }}/index.php'
     src: '{{ install_base }}/codeigniter/index.php'
     owner: root
     group: root
