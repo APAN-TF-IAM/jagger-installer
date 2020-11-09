@@ -1,0 +1,16 @@
+---
+
+- name: Add the rr3 config to Apache
+  template:
+    src: templates/apache/rr3.conf
+    dest: /etc/httpd/conf.d/rr3.conf
+    owner: root
+    group: root
+    mode: 0644
+  notify: 'Restart Apache'
+
+- name: 'Enable and Start Apache'
+  service: 
+    name: httpd
+    state: started
+    enabled: yes

@@ -19,3 +19,9 @@
     group: root
     mode: 0644
     remote_src: yes
+
+- name: 'Fix $system_path in index.php'
+  replace:
+    path: '{{ install.dir }}/index.php'
+    regexp: "system_path = 'system';"
+    replace: "system_path = '{{ install_base}}/codeigniter/system';"

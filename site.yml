@@ -4,6 +4,8 @@
     install:
       dir: "{{ install_base }}/rr3"
       setup: "{{ install_base }}/rr3-setup"
+    host:
+      name: apan.manager.aaf-experimentation.cloud.edu.au
     db:
       name: rr3
       username: rr3user
@@ -20,3 +22,4 @@
     - include_tasks: tasks/codeigniter.yml
     - include_tasks: tasks/db.yml
     - include_tasks: tasks/rr3.yml
+    - include_tasks: tasks/apache.yml
