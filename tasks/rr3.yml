@@ -7,5 +7,15 @@
 
 - name: 'Have composer install additional libraries'
   command: '/usr/local/bin/composer install'
+  args:
     chdir: '{{ install.dir }}/application'
     creates: '{{ install.dir }}/application/composer.lock'
+
+- name: 'Copy in the index.php file'
+  copy:
+    name: '{{ install.dir }}/index.php'
+    src: '{{ install_base }}/codeigniter/index.php'
+    owner: root
+    group: root
+    mode: 0644
+    remote_src: yes
