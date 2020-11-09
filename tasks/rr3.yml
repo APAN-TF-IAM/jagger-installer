@@ -4,3 +4,8 @@
   git:
     repo: 'https://github.com/Edugate/Jagger'
     dest: '{{ install.dir }}'
+
+- name: 'Have composer install additional libraries'
+  command: '/usr/local/bin/composer install'
+    chdir: '{{ install.dir }}/application'
+    creates: '{{ install.dir }}/application/composer.lock'

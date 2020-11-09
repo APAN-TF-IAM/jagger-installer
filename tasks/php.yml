@@ -24,5 +24,8 @@
       - php-mysqlnd
       - php-mcrypt
       - php-pecl-memcached
+      - php-bcmath
+      - php-mbstring
+      - php-xml
     state: latest
 
