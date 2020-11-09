@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
-cd {{ install_base }}/install
+cd {{ install.dir }}/install
 
-php {{ install_base }}/install/install_composer
+php {{ install.dir }}/install/install_composer
 
-mv {{ install_base }}/install/composer.phar /usr/local/bin/composer
+mv {{ install.dir }}/install/composer.phar /usr/local/bin/composer

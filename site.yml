@@ -16,4 +16,5 @@
     - include_tasks: tasks/system.yml
     - include_tasks: tasks/php.yml
     - include_tasks: tasks/composer.yml
+    - include_tasks: tasks/codeigniter.yml
     - include_tasks: tasks/db.yml
