@@ -1,0 +1,6 @@
+#!/bin/bash
+
+the_install_base='/opt'
+
+ansible-playbook -i ansible_hosts site.yml --force-handlers --extra-var="install_base=$the_install_base"
+

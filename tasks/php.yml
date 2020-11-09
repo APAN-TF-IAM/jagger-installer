@@ -1,0 +1,28 @@
+---
+- name: 'Install epel-release and yum-utils'
+  yum:
+    name:
+      - epel-release
+      - yum-utils
+    state: installed
+
+- name: 'Install remi-release-7'
+  yum:
+    name:
+      - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    state: installed
+
+- name: 'Use yum-config-manager to enable remi-php74'
+  shell: yum-config-manager --enable remi-php74
+
+- name: 'Install php and required libraries'
+  yum:
+    name:
+      - php
+      - php-opcache
+      - php-cli
+      - php-mysqlnd
+      - php-mcrypt
+      - php-pecl-memcached
+    state: latest
+

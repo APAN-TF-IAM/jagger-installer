@@ -1,0 +1,112 @@
+2020-10-25 03:34:33,227 p=6188 u=ec2-user n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 03:34:33,247 p=6188 u=ec2-user n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 03:34:35,815 p=6188 u=ec2-user n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:34:35,844 p=6188 u=ec2-user n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 03:34:36,062 p=6188 u=ec2-user n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 03:34:36,067 p=6188 u=ec2-user n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 03:34:36,068 p=6188 u=ec2-user n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-10-25 03:44:08,510 p=6263 u=ec2-user n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 03:44:08,526 p=6263 u=ec2-user n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 03:44:11,309 p=6263 u=ec2-user n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:44:11,354 p=6263 u=ec2-user n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 03:44:11,459 p=6263 u=ec2-user n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 03:44:11,465 p=6263 u=ec2-user n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 03:44:11,466 p=6263 u=ec2-user n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=2    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-10-25 03:50:35,250 p=6495 u=root n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 03:50:35,269 p=6495 u=root n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 03:50:37,304 p=6495 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:50:37,333 p=6495 u=root n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 03:50:37,500 p=6495 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 03:50:37,527 p=6495 u=root n=ansible | TASK [include_tasks] *************************************************************************************************
+2020-10-25 03:50:37,601 p=6495 u=root n=ansible | included: /home/ec2-user/jagger/tasks/php.yml for vm-144-6-228-206.rc.tasmania.nectar.org.au
+2020-10-25 03:50:37,631 p=6495 u=root n=ansible | TASK [Install epel-release and yum-utils] ****************************************************************************
+2020-10-25 03:50:39,289 p=6495 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:50:39,295 p=6495 u=root n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 03:50:39,295 p=6495 u=root n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=4    changed=0    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-10-25 03:57:49,351 p=6672 u=root n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 03:57:49,368 p=6672 u=root n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 03:57:51,539 p=6672 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:57:51,573 p=6672 u=root n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 03:57:51,674 p=6672 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 03:57:51,701 p=6672 u=root n=ansible | TASK [include_tasks] *************************************************************************************************
+2020-10-25 03:57:51,751 p=6672 u=root n=ansible | included: /home/ec2-user/jagger/tasks/php.yml for vm-144-6-228-206.rc.tasmania.nectar.org.au
+2020-10-25 03:57:51,781 p=6672 u=root n=ansible | TASK [Install epel-release and yum-utils] ****************************************************************************
+2020-10-25 03:57:53,461 p=6672 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:57:53,490 p=6672 u=root n=ansible | TASK [Install remi-release-7] ****************************************************************************************
+2020-10-25 03:57:58,470 p=6672 u=root n=ansible | changed: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 03:57:58,477 p=6672 u=root n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 03:57:58,477 p=6672 u=root n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=5    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-10-25 04:03:41,693 p=6818 u=root n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 04:03:41,711 p=6818 u=root n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 04:03:43,581 p=6818 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:03:43,609 p=6818 u=root n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 04:03:43,753 p=6818 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 04:03:43,781 p=6818 u=root n=ansible | TASK [include_tasks] *************************************************************************************************
+2020-10-25 04:03:43,832 p=6818 u=root n=ansible | included: /home/ec2-user/jagger/tasks/php.yml for vm-144-6-228-206.rc.tasmania.nectar.org.au
+2020-10-25 04:03:43,862 p=6818 u=root n=ansible | TASK [Install epel-release and yum-utils] ****************************************************************************
+2020-10-25 04:03:45,654 p=6818 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:03:45,681 p=6818 u=root n=ansible | TASK [Install remi-release-7] ****************************************************************************************
+2020-10-25 04:03:48,072 p=6818 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:03:48,123 p=6818 u=root n=ansible | TASK [Use yum-config-manager to enable remi-php74] *******************************************************************
+2020-10-25 04:03:49,540 p=6818 u=root n=ansible | changed: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:03:49,544 p=6818 u=root n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 04:03:49,545 p=6818 u=root n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-10-25 04:06:09,610 p=7062 u=root n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 04:06:09,627 p=7062 u=root n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 04:06:11,287 p=7062 u=root n=ansible |  [ERROR]: User interrupted execution
+
+2020-10-25 04:06:47,808 p=7146 u=root n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 04:06:47,825 p=7146 u=root n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 04:06:49,812 p=7146 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:06:49,840 p=7146 u=root n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 04:06:49,941 p=7146 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 04:06:49,969 p=7146 u=root n=ansible | TASK [include_tasks] *************************************************************************************************
+2020-10-25 04:06:50,022 p=7146 u=root n=ansible | included: /home/ec2-user/jagger/tasks/php.yml for vm-144-6-228-206.rc.tasmania.nectar.org.au
+2020-10-25 04:06:50,051 p=7146 u=root n=ansible | TASK [Install epel-release and yum-utils] ****************************************************************************
+2020-10-25 04:06:51,781 p=7146 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:06:51,808 p=7146 u=root n=ansible | TASK [Install remi-release-7] ****************************************************************************************
+2020-10-25 04:06:54,137 p=7146 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:06:54,166 p=7146 u=root n=ansible | TASK [Use yum-config-manager to enable remi-php74] *******************************************************************
+2020-10-25 04:06:55,707 p=7146 u=root n=ansible | changed: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:06:55,735 p=7146 u=root n=ansible | TASK [Install php] ***************************************************************************************************
+2020-10-25 04:07:29,850 p=7146 u=root n=ansible | changed: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:07:29,857 p=7146 u=root n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 04:07:29,857 p=7146 u=root n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2020-10-25 04:18:19,072 p=8382 u=root n=ansible | PLAY [all] ***********************************************************************************************************
+2020-10-25 04:18:19,089 p=8382 u=root n=ansible | TASK [Gathering Facts] ***********************************************************************************************
+2020-10-25 04:18:21,193 p=8382 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:18:21,220 p=8382 u=root n=ansible | TASK [Verify Ansible version meets requirements] *********************************************************************
+2020-10-25 04:18:21,371 p=8382 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au] => {
+    "changed": false, 
+    "msg": "All assertions passed"
+}
+2020-10-25 04:18:21,398 p=8382 u=root n=ansible | TASK [include_tasks] *************************************************************************************************
+2020-10-25 04:18:21,461 p=8382 u=root n=ansible | included: /home/ec2-user/jagger/tasks/php.yml for vm-144-6-228-206.rc.tasmania.nectar.org.au
+2020-10-25 04:18:21,490 p=8382 u=root n=ansible | TASK [Install epel-release and yum-utils] ****************************************************************************
+2020-10-25 04:18:23,323 p=8382 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:18:23,373 p=8382 u=root n=ansible | TASK [Install remi-release-7] ****************************************************************************************
+2020-10-25 04:18:26,199 p=8382 u=root n=ansible | ok: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:18:26,228 p=8382 u=root n=ansible | TASK [Use yum-config-manager to enable remi-php74] *******************************************************************
+2020-10-25 04:18:27,977 p=8382 u=root n=ansible | changed: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:18:28,015 p=8382 u=root n=ansible | TASK [Install php and required libraries] ****************************************************************************
+2020-10-25 04:18:50,448 p=8382 u=root n=ansible | changed: [vm-144-6-228-206.rc.tasmania.nectar.org.au]
+2020-10-25 04:18:50,453 p=8382 u=root n=ansible | PLAY RECAP ***********************************************************************************************************
+2020-10-25 04:18:50,454 p=8382 u=root n=ansible | vm-144-6-228-206.rc.tasmania.nectar.org.au : ok=7    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
