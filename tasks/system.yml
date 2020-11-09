@@ -11,6 +11,7 @@
 - name: 'Create setup directory'
   file:
     name: '{{ install.setup }}'
+    state: directory
     owner: root
     group: root
     mode: 0700
