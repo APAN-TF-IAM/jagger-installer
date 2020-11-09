@@ -1,8 +1,8 @@
 ---
 
 - name: 'Set script to install composer'
-  templete:
-    dest: '{{install.dir }}/install/install_composer.sh'
+  template:
+    dest: '{{ install.dir }}/install/install_composer.sh'
     src: 'templates/php/install_composer.sh'
     owner: root
     group: root
@@ -18,5 +18,6 @@
 
 - name: 'Run the composer install script'
   command: '{{ install.dir }}/install/install_composer.sh'
+  args:
     creates: '/usr/local/bin/composer'
 
