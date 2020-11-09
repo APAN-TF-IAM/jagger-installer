@@ -1,5 +1,13 @@
 ---
 
+- name: 'Create base directory'
+  file:
+    name: '{{ install.dir }}'
+    state: directory
+    owner: root
+    group: root
+    mode: 0750
+
 - name: 'Update yum packages (yum -y update)'
   yum: name=* state=latest
 
