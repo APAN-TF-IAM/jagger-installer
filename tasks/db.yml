@@ -32,14 +32,14 @@
 - name: 'Create lock_down_db.sql'
   template:
     src: templates/db/lock_down_db.sql
-    dest: '{{ install.dir }}/lock_down_db.sql'
+    dest: '{{ install.setup }}/lock_down_db.sql'
     owner: root
     group: root
     mode: 0600
   register: security_sql
 
 - name: 'Run lock_down_db.sql'
-  command: 'mysql -e "source {{ install.dir }}/lock_down_db.sql"'
+  command: 'mysql -e "source {{ install.setup }}/lock_down_db.sql"'
   when: security_sql.changed
 
 - name: 'Write /root/.my.cnf'

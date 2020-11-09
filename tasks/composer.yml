@@ -2,7 +2,7 @@
 
 - name: 'Set script to install composer'
   template:
-    dest: '{{ install.dir }}/install/install_composer.sh'
+    dest: '{{ install.setup }}/install_composer.sh'
     src: 'templates/php/install_composer.sh'
     owner: root
     group: root
@@ -11,13 +11,13 @@
 - name: 'Get the composer install file'
   get_url:
     url: https://getcomposer.org/installer
-    dest: '{{ install.dir }}/install/install_composer'
+    dest: '{{ install.setup }}/install_composer'
     owner: root
     group: root
     mode: 0750
 
 - name: 'Run the composer install script'
-  command: '{{ install.dir }}/install/install_composer.sh'
+  command: '{{ install.setup }}/install_composer.sh'
   args:
     creates: '/usr/local/bin/composer'
 

@@ -8,13 +8,20 @@
     group: root
     mode: 0750
 
-- name: 'Create install directory'
+- name: 'Create setup directory'
   file:
-    name: '{{ install.dir }}/install'
+    name: '{{ install.setup }}'
+    owner: root
+    group: root
+    mode: 0700
+
+- name: 'Create password directory'
+  file:
+    name: '{{ install.setup }}/password'
     state: directory
     owner: root
     group: root
-    mode: 0750
+    mode: 0700
 
 - name: 'Update yum packages (yum -y update)'
   yum: name=* state=latest

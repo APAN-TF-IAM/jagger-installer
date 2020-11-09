@@ -3,10 +3,11 @@
   vars:
     install:
       dir: "{{ install_base }}/rr3"
+      setup: "{{ install_base }}/rr3-setup"
     db:
       name: rr3
       username: rr3user
-      password: "{{ lookup('password', install.dir + '/passwords/' + inventory_hostname + '/mariadb chars=letters,digits length=64') }}"
+      password: "{{ lookup('password', install.setup + '/passwords/' + inventory_hostname + '/mariadb chars=letters,digits length=64') }}"
   tasks:
     - name: 'Verify Ansible version meets requirements'
       assert:
