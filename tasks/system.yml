@@ -8,6 +8,14 @@
     group: root
     mode: 0750
 
+- name: 'Create install directory'
+  file:
+    name: '{{ install.dir }}/install'
+    state: directory
+    owner: root
+    group: root
+    mode: 0750
+
 - name: 'Update yum packages (yum -y update)'
   yum: name=* state=latest
 
