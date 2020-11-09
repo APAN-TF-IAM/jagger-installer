@@ -33,6 +33,7 @@
       - chrony
       - httpd
       - mod_ssl
+      - unzip
     state: installed
 
 - name: 'Install required packages - OS Version 7'

@@ -3,13 +3,13 @@
 - name: 'Download Codeigniter'
   get_url: 
     url: https://github.com/bcit-ci/CodeIgniter/archive/3.1.5.zip
-    dest: '{{ install-base}} /codeigniter.zip'
+    dest: '{{ install_base }}/codeigniter.zip'
     owner: root
     group: root
     mode: 0750
 
 - name: 'Unarchive codeigniter'
   unarchive:
-    src: '{{ install-base }} /codeigniter.zip'
-    dest: '{{ install-base }}'
+    src: '{{ install_base }}/codeigniter.zip'
+    dest: '{{ instal_-base }}'
     remote_src: yes
