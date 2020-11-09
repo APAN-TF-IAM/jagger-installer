@@ -1,5 +1,13 @@
 ---
 
+- name: 'Set script to install composer'
+  templete:
+    dest: '{{install.dir }}/install/install_composer.sh'
+    src: 'templates/php/install_composer.sh'
+    owner: root
+    group: root
+    mode: 0750
+
 - name: 'Get the composer install file'
   get_url:
     url: https://getcomposer.org/installer
@@ -9,5 +17,6 @@
     mode: 0750
 
 - name: 'Run the composer install script'
-  command: 'php {{ install.dir }}/install/install_composer'
+  command: '{{ install.dir }}/install/install_composer.sh'
+    creates: '/usr/local/bin/composer'
 
