@@ -63,3 +63,19 @@
     owner: root
     group: apache
     more: 750
+
+- name: 'Set main config_rr.php file'
+  template:
+    src: templates/rr3/config_rr.php
+    dest: /opt/rr3/application/config/config_rr.php
+    owner: root
+    group: apache
+    more: 750
+
+- name: 'Set main database.php file'
+  template:
+    src: templates/rr3/database.php
+    dest: /opt/rr3/application/config/database.php
+    owner: root
+    group: apache
+    more: 750

@@ -7,9 +7,9 @@ if (!defined('BASEPATH'))
 $config['rr_setup_allowed'] = FALSE;
 $config['site_logo'] = 'logo-default.png';
 
-$config['syncpass'] = 'verystrongpasss';
+$config['syncpass'] = '{{ config.syncpass }}';
 
-$config['support_mailto'] = 'support@example.com';
+$config['support_mailto'] = '{{ support_mailto }}';
 
 /**
  * Federation Registration
@@ -34,7 +34,7 @@ $config['rr_logouriprefix'] = 'logos/';
 /**
  * Logos upload
  */
-$config['rr_logoupload'] = false;
+$config['rr_logoupload'] = true;
 /**
  * rr_logoupload_relpath must be under your installation path
  */
@@ -58,7 +58,7 @@ $config['rr_logo_maxsize'] = 2000;
 /**
  * autoregister_federated: if true then user authenticated with shibboleth is created in db 
  */
-$config['autoregister_federated'] = false;
+$config['autoregister_federated'] = true;
 /**
  * set default Role for autoregistered user: Guest or Member
  * Guest has lowest level of permission, he can access only some pages
@@ -120,7 +120,7 @@ $config['policy_dropdown'] = array('0' => 'never', '1' => 'permit only if requir
 /**
  * default registrationAuthority for example http://www.heanet.ie
  */
-$config['registrationAutority'] = null;
+$config['registrationAutority'] = '{{ config.registrationAutority }}';
 /**
  * (boolean) load default registrationAuthority to localy managed entities if not  set. It will be visible in generated metadata 
  */

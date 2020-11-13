@@ -9,6 +9,9 @@
     config:
       log_threshold: 4
       encryption_key: "{{ lookup('password', install.setup + '/passwords/' + inventory_hostname + '/encryption_key chars=letters,digits length=64') }}"
+      syncpass: "{{ lookup('password', install.setup + '/passwords/' + inventory_hostname + '/syncpass chars=letters,digits length=64') }}"
+      support_mailto: support@apan.net
+      registrationAutority: https://apan.net
     db:
       name: rr3
       username: rr3user
