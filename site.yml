@@ -6,6 +6,9 @@
       setup: "{{ install_base }}/rr3-setup"
     host:
       name: apan.manager.aaf-experimentation.cloud.edu.au
+      encryption_key: "{{ lookup('password', install.setup + '/passwords/' + inventory_hostname + '/encryption_key chars=letters,digits length=64') }}"
+    config:
+      log_threshold: 4
     db:
       name: rr3
       username: rr3user

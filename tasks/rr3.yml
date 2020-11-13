@@ -32,9 +32,34 @@
     chdir: /opt/rr3
     creates: /opt/rr3/logos2
 
+- name: 'Check if composer has run'
+  stat:
+    path: /opt/rr3/application/composer.done
+  register: composer_done
+
+- name: 'Remove composer.lock to ensure composer runs'
+  file:
+    path: /opt/rr3/application/composer.lock
+    state: absent
+  when: composer_done.stat.exists == False
+
 - name: 'Run composer'
-  command: 'rm -f /opt/rr3/application/composer.lock; /usr/local/bin/composer install 2> /opt/rr3/application/composer.log'
+  command: '/usr/local/bin/composer install'
   args:
     chdir: /opt/rr3/application
-    creates: /opt/rr3/application/composer.log
+    creates: /opt/rr3/application/composer.done
+  when: composer_done.stat.exists == False
 
+- name: 'Set composer.done'
+  file:
+    path: /opt/rr3/application/composer.done
+    state: touch
+  when: composer_done.stat.exists == False
+
+- name: 'Set main config.php file'
+  template:
+    src: templates/rr3/config.php
+    dest: /opt/rr3/application/config/config.php
+    owner: root
+    group: apache
+    more: 750
