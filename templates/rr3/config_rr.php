@@ -9,7 +9,7 @@ $config['site_logo'] = 'logo-default.png';
 
 $config['syncpass'] = '{{ config.syncpass }}';
 
-$config['support_mailto'] = '{{ support_mailto }}';
+$config['support_mailto'] = '{{ config.support_mailto }}';
 
 /**
  * Federation Registration

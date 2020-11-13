@@ -56,26 +56,42 @@
     state: touch
   when: composer_done.stat.exists == False
 
-- name: 'Set main config.php file'
+- name: 'Set config config.php file'
   template:
     src: templates/rr3/config.php
     dest: /opt/rr3/application/config/config.php
     owner: root
     group: apache
-    more: 750
+    mode: 750
 
-- name: 'Set main config_rr.php file'
+- name: 'Set config config_rr.php file'
   template:
     src: templates/rr3/config_rr.php
     dest: /opt/rr3/application/config/config_rr.php
     owner: root
     group: apache
-    more: 750
+    mode: 750
 
-- name: 'Set main database.php file'
+- name: 'Set config database.php file'
   template:
     src: templates/rr3/database.php
     dest: /opt/rr3/application/config/database.php
     owner: root
     group: apache
-    more: 750
+    mode: 750
+
+- name: 'Set config mail.php file'
+  template:
+    src: templates/rr3/mail.php
+    dest: /opt/rr3/application/config/mail.php
+    owner: root
+    group: apache
+    mode: 750
+
+- name: 'Set config memcached.php file'
+  template:
+    src: templates/rr3/memcached.php
+    dest: /opt/rr3/application/config/memcached.php
+    owner: root
+    group: apache
+    mode: 750
