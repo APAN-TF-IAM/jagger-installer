@@ -16,9 +16,9 @@
     group: root
     mode: 0700
 
-- name: 'Create password directory'
+- name: 'Create passwords directory'
   file:
-    name: '{{ install.setup }}/password'
+    name: '{{ install.setup }}/passwords'
     state: directory
     owner: root
     group: root
