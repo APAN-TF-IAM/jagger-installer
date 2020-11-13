@@ -25,3 +25,16 @@
     path: '{{ install.dir }}/index.php'
     regexp: "system_path = 'system';"
     replace: "system_path = '{{ install_base}}/codeigniter/system';"
+
+- name: 'Run the install script'
+  command: '/opt/rr3/install.sh'
+  args:
+    chdir: /opt/rr3
+    creates: /opt/rr3/logos2
+
+- name: 'Run composer'
+  command: 'rm -f /opt/rr3/application/composer.lock; /usr/local/bin/composer install 2> /opt/rr3/application/composer.log'
+  args:
+    chdir: /opt/rr3/application
+    creates: /opt/rr3/application/composer.log
+
