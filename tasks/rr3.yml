@@ -26,6 +26,14 @@
     regexp: "system_path = 'system';"
     replace: "system_path = '{{ install_base}}/codeigniter/system';"
 
+- name: 'Update file composer.json'
+  template:
+    src: templates/rr3/composer.json
+    dest: /opt/rr3/application/composer.json
+    owner: apache
+    group: apache
+    mode: 0644
+
 - name: 'Run the install script'
   command: '/opt/rr3/install.sh'
   args:
@@ -60,7 +68,7 @@
   template:
     src: templates/rr3/config.php
     dest: /opt/rr3/application/config/config.php
-    owner: root
+    owner: apache
     group: apache
     mode: 750
 
@@ -80,10 +88,10 @@
     group: apache
     mode: 750
 
-- name: 'Set config mail.php file'
+- name: 'Set config email.php file'
   template:
-    src: templates/rr3/mail.php
-    dest: /opt/rr3/application/config/mail.php
+    src: templates/rr3/email.php
+    dest: /opt/rr3/application/config/email.php
     owner: root
     group: apache
     mode: 750
