@@ -55,7 +55,6 @@
   command: '/usr/local/bin/composer install'
   args:
     chdir: /opt/rr3/application
-    creates: /opt/rr3/application/composer.done
   when: composer_done.stat.exists == False
 
 - name: 'Set composer.done'
@@ -103,3 +102,26 @@
     owner: root
     group: apache
     mode: 750
+
+- name: 'Check if doctrine has run'
+  stat:
+    path: /opt/rr3/application/doctrine.done
+  register: doctrine_done
+
+- name: 'Populate database tables'
+  command: '/opt/rr3/application/doctrine orm:schema-tool:create
+  args:
+    chdir: /opt/rr3/application
+  when: doctrine_done.stat.exists == False
+
+- name: 'Generate proxies'
+  command: '/opt/rr3/application/doctrine/doctrine orm:generate-proxies'
+  args:
+    chdir: /opt/rr3/application
+  when: doctrine_done.stat.exists == False
+
+- name: - name: 'Set doctrine.done'
+  file:
+    path: /opt/rr3/application/doctrine.done
+    state: touch
+  when: doctrine_done.stat.exists == False
