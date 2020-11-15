@@ -69,7 +69,7 @@
     dest: /opt/rr3/application/config/config.php
     owner: apache
     group: apache
-    mode: 750
+    mode: 0750
 
 - name: 'Set config config_rr.php file'
   template:
@@ -77,7 +77,7 @@
     dest: /opt/rr3/application/config/config_rr.php
     owner: root
     group: apache
-    mode: 750
+    mode: 0750
 
 - name: 'Set config database.php file'
   template:
@@ -85,7 +85,7 @@
     dest: /opt/rr3/application/config/database.php
     owner: root
     group: apache
-    mode: 750
+    mode: 0750
 
 - name: 'Set config email.php file'
   template:
@@ -93,7 +93,7 @@
     dest: /opt/rr3/application/config/email.php
     owner: root
     group: apache
-    mode: 750
+    mode: 0750
 
 - name: 'Set config memcached.php file'
   template:
@@ -101,7 +101,7 @@
     dest: /opt/rr3/application/config/memcached.php
     owner: root
     group: apache
-    mode: 750
+    mode: 0750
 
 - name: 'Check if doctrine has run'
   stat:
@@ -109,7 +109,7 @@
   register: doctrine_done
 
 - name: 'Populate database tables'
-  command: '/opt/rr3/application/doctrine orm:schema-tool:create
+  command: '/opt/rr3/application/doctrine orm:schema-tool:create'
   args:
     chdir: /opt/rr3/application
   when: doctrine_done.stat.exists == False
@@ -120,7 +120,7 @@
     chdir: /opt/rr3/application
   when: doctrine_done.stat.exists == False
 
-- name: - name: 'Set doctrine.done'
+- name: 'Set doctrine.done'
   file:
     path: /opt/rr3/application/doctrine.done
     state: touch
