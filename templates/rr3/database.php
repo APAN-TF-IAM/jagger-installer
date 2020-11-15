@@ -49,7 +49,7 @@ $active_record = TRUE;
 
 $db['default']['hostname'] = '127.0.0.1';
 $db['default']['username'] = '{{ db.username }}';
-$db['default']['password'] = '{{ db.password }} ';
+$db['default']['password'] = '{{ db.password }}';
 $db['default']['database'] = '{{ db.name }}';
 $db['default']['dsn']      = 'mysql:host=127.0.0.1;port=3306;dbname={{ db.name }}';
 $db['default']['dbdriver'] = 'pdo';

@@ -3,6 +3,7 @@
 - name: 'Clone the rr3 repo'
   git:
     repo: 'https://github.com/Edugate/Jagger'
+    force: yes
     dest: '{{ install.dir }}'
 
 - name: 'Have composer install additional libraries'
