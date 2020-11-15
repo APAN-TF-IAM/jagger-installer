@@ -116,7 +116,7 @@
   when: doctrine_done.stat.exists == False
 
 - name: 'Generate proxies'
-  command: '/opt/rr3/application/doctrine/doctrine orm:generate-proxies'
+  command: '/opt/rr3/application/doctrine orm:generate-proxies'
   args:
     chdir: /opt/rr3/application
   when: doctrine_done.stat.exists == False
