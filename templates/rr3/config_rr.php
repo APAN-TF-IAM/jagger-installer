@@ -4,7 +4,7 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 
-$config['rr_setup_allowed'] = FALSE;
+$config['rr_setup_allowed'] = TRUE;
 $config['site_logo'] = 'logo-default.png';
 
 $config['syncpass'] = '{{ config.syncpass }}';
