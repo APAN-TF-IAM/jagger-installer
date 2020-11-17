@@ -42,7 +42,7 @@
       - httpd
       - mod_ssl
       - unzip
-      - memcachd
+      - memcached
     state: installed
 
 - name: 'Install required packages - OS Version 7'
