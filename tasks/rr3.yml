@@ -134,7 +134,7 @@
     login_password: "{{ db.password }}"
     query: "insert into migrations (version) value ({{ jagger.version }}) on duplicate key update version=version"
 
-- name: 'Set directories writable by Apache
+- name: 'Set directories writable by Apache'
   file:
     path: "/opt/rr3/application/{{ item }}"
     owner: root
