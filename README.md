@@ -6,9 +6,10 @@ The installation is based on the [JAGGER - Admin Guide Draft 1.0 documentation](
 ## System Requirements
 
 1. A dedicated CentOS 7 or 8 server (virtual or physical), with the following minimum specifications:
-  * 2 CPUS
-  * 4 GB RAM
-  * 10GB+ partition for OS
+
+    * 2 CPUS
+    * 4 GB RAM
+    * 10GB+ partition for OS
 
 2. You MUST have SSH access to the server
 3. You MUST be able to execute commands as *root* on the system without limitation
@@ -17,7 +18,7 @@ The installation is based on the [JAGGER - Admin Guide Draft 1.0 documentation](
 6. The server MUST be able to communicate with the wider internet without blockage due to firewall rules. All publicly routable servers MUST be accessible for:
 
     | Port | Purpose |
-    ------------------
+    |------|---------|
     | 80   | Outbound HTTP connections |
     | 443  | outbound HTTPS connections |
 
