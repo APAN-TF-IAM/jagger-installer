@@ -54,8 +54,20 @@ The directory jagger-installer will be created as a result of the clone. Change 
    ```
    cd jagger-installer
    ```
+There are several file to edit that are specific to your environment.
 
+    | File name | Line to edit | Value |
+    |-----------|--------------|-------|
+    | ansible_hosts | Line #2 | Replace the host name with the fully qualified domain name (FQDN) of your server |
+    | site.yml | vars.config.support_mailto | Replace with appropriate email address | 
+    |          | vars.config.registrationAutority | Replace with appropriate URL |
 
+## Deploy
 
+Run the deploy script. This script MUST by run as root.
+
+   ```
+   ./deploy
+   ```
  
 
