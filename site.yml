@@ -4,8 +4,6 @@
     install:
       dir: "{{ install_base }}/rr3"
       setup: "{{ install_base }}/rr3-setup"
-    host:
-      name: apan.manager.aaf-experimentation.cloud.edu.au
     jagger:
       version: 18
     config:
