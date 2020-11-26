@@ -24,9 +24,6 @@
     group: root
     mode: 0700
 
-- name: 'Update yum packages (yum -y update)'
-  yum: name=* state=latest
-
 - name: 'Set SELinux to permissive mode'
   selinux:
     policy: targeted
