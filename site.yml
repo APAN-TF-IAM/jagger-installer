@@ -4,8 +4,6 @@
     install:
       dir: "{{ install_base }}/rr3"
       setup: "{{ install_base }}/rr3-setup"
-    jagger:
-      version: 18
     config:
       log_threshold: 4
       encryption_key: "{{ lookup('password', install.setup + '/passwords/' + inventory_hostname + '/encryption_key chars=letters,digits length=64') }}"

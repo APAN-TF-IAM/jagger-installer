@@ -70,4 +70,73 @@ Run the deploy script. This script MUST by run as root.
    ./deploy
    ```
  
+If the script completes without error the following will have been installed and configured.
+
+    | Software | Description |
+    |----------|-------------|
+    | Apache   | Web server | 
+    | MariaDB | Database engine that holds the federation data |
+    | memcached | Caching server used by the Registry software |
+    | php | Version 7.4 of PHP with a modified /etc/php.ini |
+    | rr3 | The Jagger Resource Registry software from HEAnet |
+
+The Resource Registry should now be ready for setup and final configuration.
+
+## Setup
+
+Setup will create the first admin account needed to login to the registry. Navigate to the setup page on your registry.
+
+   ```
+   https://[FQDN-of-your-server]/rr3/setup
+   ```
+
+You will see a Certificate error as the default Apache certificate is in use. Before releasing your Jagger you need
+to add a signed certificate to your Apache server. This is left for you to action.
+
+A form should appear asking for user details. Complete the form and submit. The following message should appear
+below the submit button.
+
+   ```
+   Done! Don't forget to disable "setup allowed" in config file 
+   ```
+
+## Disable Setup
+
+Next we must disable the Setup option. Edit the file /opt/rr3/application/config/config_rr.php and
+set 'rr_setup_allowed' to FALSE.
+
+   ```
+   $config['rr_setup_allowed'] = FALSE;
+   ```
+
+## First Login
+
+You are now ready to login to the Jagger Resource Registry for the first time. Navigate to the following address
+and use the username / password you entered in the setup screen;
+
+   ```
+   https://[FQDN-of-your-server]/rr3
+   ```
+
+### Configuration tasks
+
+To complete the setup of your Jagger there are a number of tasks that need to be completed from the Web user interface.
+
+  1. Check and verify the system setup. Navigate to the Administration tab and select the System option. There will be four processes, run each in turn.
+
+    * Validate ORM version, PHP version
+    * Validate database schema files
+    * Validate if database schema files are in sync with database
+    * Check and run data upgrade/migration if needed
+
+  All should respond with 1 or more green bars indicating all is good.
+
+  2. Web configuration settings. Navigate to the Administration tab and select the Configuration option. A list of options will appear. Review each, enable or diable which options that are appropriate for your setup.
+
+  3. Add an artical for display on the home page of your Jagger. Navigate to the Administration tab and select the Manage Articles option.
+
+     The default home page article MUST have an Article ID equal to "front_page", it should be Visible for ananymous and Enabled. It will then diplay for everyone, logged in or not.
+
+
+
 
