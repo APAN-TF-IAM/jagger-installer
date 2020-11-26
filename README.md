@@ -39,9 +39,9 @@ The installation is based on the [JAGGER - Admin Guide Draft 1.0 documentation](
 To begin you MUST clone the Jagger installer repository to your server. Install git on your server i
 using the following command;
 
-    ```
-    yum -y install git
-    ```
+   ```
+   yum -y install git
+   ```
  
 Then clone the Jagger installer repostory;
 
@@ -56,11 +56,11 @@ The directory jagger-installer will be created as a result of the clone. Change 
    ```
 There are several file to edit that are specific to your environment.
 
-    | File name | Line to edit | Value |
-    |-----------|--------------|-------|
-    | ansible_hosts | Line #2 | Replace the host name with the fully qualified domain name (FQDN) of your server |
-    | site.yml | vars.config.support_mailto | Replace with appropriate email address | 
-    |          | vars.config.registrationAutority | Replace with appropriate URL |
+   | File name | Line to edit | Value |
+   |-----------|--------------|-------|
+   | ansible_hosts | Line #2 | Replace the host name with the fully qualified domain name (FQDN) of your server |
+   | site.yml | vars.config.support_mailto | Replace with appropriate email address | 
+   |          | vars.config.registrationAutority | Replace with appropriate URL |
 
 ## Deploy
 
@@ -72,13 +72,13 @@ Run the deploy script. This script MUST by run as root.
  
 If the script completes without error the following will have been installed and configured.
 
-    | Software | Description |
-    |----------|-------------|
-    | Apache   | Web server | 
-    | MariaDB | Database engine that holds the federation data |
-    | memcached | Caching server used by the Registry software |
-    | php | Version 7.4 of PHP with a modified /etc/php.ini |
-    | rr3 | The Jagger Resource Registry software from HEAnet |
+   | Software | Description |
+   |----------|-------------|
+   | Apache   | Web server | 
+   | MariaDB | Database engine that holds the federation data |
+   | memcached | Caching server used by the Registry software |
+   | php | Version 7.4 of PHP with a modified /etc/php.ini |
+   | rr3 | The Jagger Resource Registry software from HEAnet |
 
 The Resource Registry should now be ready for setup and final configuration.
 
@@ -124,10 +124,10 @@ To complete the setup of your Jagger there are a number of tasks that need to be
 
   1. Check and verify the system setup. Navigate to the Administration tab and select the System option. There will be four processes, run each in turn.
 
-    * Validate ORM version, PHP version
-    * Validate database schema files
-    * Validate if database schema files are in sync with database
-    * Check and run data upgrade/migration if needed
+   * Validate ORM version, PHP version
+   * Validate database schema files
+   * Validate if database schema files are in sync with database
+   * Check and run data upgrade/migration if needed
 
   All should respond with 1 or more green bars indicating all is good.
 
