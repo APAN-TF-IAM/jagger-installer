@@ -1,5 +1,8 @@
 #!/bin/bash
 
+yum install epel-release
+yum install ansible
+
 ansible-galaxy collection install community.mysql
 
 the_install_base='/opt'
