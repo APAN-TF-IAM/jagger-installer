@@ -122,20 +122,20 @@ and use the username / password you entered in the setup screen;
 
 To complete the setup of your Jagger there are a number of tasks that need to be completed from the Web user interface.
 
-  1. Check and verify the system setup. Navigate to the Administration tab and select the System option. There will be four processes, run each in turn.
+1. Check and verify the system setup. Navigate to the Administration tab and select the System option. There will be four processes, run each in turn.
 
-   * Validate ORM version, PHP version
-   * Validate database schema files
-   * Validate if database schema files are in sync with database
-   * Check and run data upgrade/migration if needed
+    * Validate ORM version, PHP version
+    * Validate database schema files
+    * Validate if database schema files are in sync with database
+    * Check and run data upgrade/migration if needed
 
-  All should respond with 1 or more green bars indicating all is good.
+    All should respond with 1 or more green bars indicating all is good.
 
-  2. Web configuration settings. Navigate to the Administration tab and select the Configuration option. A list of options will appear. Review each, enable or diable which options that are appropriate for your setup.
+2. Web configuration settings. Navigate to the Administration tab and select the Configuration option. A list of options will appear. Review each, enable or diable which options that are appropriate for your setup.
 
-  3. Add an artical for display on the home page of your Jagger. Navigate to the Administration tab and select the Manage Articles option.
+3. Add an artical for display on the home page of your Jagger. Navigate to the Administration tab and select the Manage Articles option.
 
-     The default home page article MUST have an Article ID equal to "front_page", it should be Visible for ananymous and Enabled. It will then diplay for everyone, logged in or not.
+    The default home page article MUST have an Article ID equal to "front_page", it should be Visible for ananymous and Enabled. It will then diplay for everyone, logged in or not.
 
 
 
