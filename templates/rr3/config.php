@@ -14,7 +14,7 @@
 | path to your installation.
 |
 */
-$config['base_url']	= 'https://{{ host.name }}/rr3/';
+$config['base_url']	= 'https://{{inventory_hostname}}/rr3/';
 
 /*
 |--------------------------------------------------------------------------
