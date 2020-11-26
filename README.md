@@ -34,4 +34,28 @@ The installation is based on the [JAGGER - Admin Guide Draft 1.0 documentation](
     | 80   | Inbound HTTP connections used within SAML flows  |
     | 443  | Inbound HTTPS connections used within SAML flows  |
 
+## Getting Started
+
+To begin you MUST clone the Jagger installer repository to your server. Install git on your server i
+using the following command;
+
+    ```
+    yum -y install git
+    ```
+ 
+Then clone the Jagger installer repostory;
+
+   ```
+   git clone https://github.com/APAN-TF-IAM/jagger-installer.git
+   ```
+
+The directory jagger-installer will be created as a result of the clone. Change to this directory;
+
+   ```
+   cd jagger-installer
+   ```
+
+
+
+ 
 
