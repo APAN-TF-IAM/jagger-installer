@@ -6,11 +6,19 @@
       - yum-utils
     state: installed
 
-- name: 'Install remi-release-7'
+- name: 'Install remi-release-7 for Centos 7'
   yum:
     name:
       - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
     state: installed
+  when: ansible_distribution_major_version == "7"
+
+- name: 'Install remi-release-8 for Centos 8'
+  yum:
+    name:
+      - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+    state: installed
+  when: ansible_distribution_major_version == "8"
 
 - name: 'Use yum-config-manager to enable remi-php74'
   shell: yum-config-manager --enable remi-php74
