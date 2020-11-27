@@ -16,7 +16,7 @@
 - name: 'Install remi-release-8 for Centos 8'
   yum:
     name:
-      - http://rpms.remirepo.net/enterprise/remi-release-7.rpm
+      - http://rpms.remirepo.net/enterprise/remi-release-8.rpm
     state: installed
   when: ansible_distribution_major_version == "8"
 
