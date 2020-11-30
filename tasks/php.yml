@@ -18,10 +18,16 @@
     name:
       - http://rpms.remirepo.net/enterprise/remi-release-8.rpm
     state: installed
+    disable_gpg_check: yes
   when: ansible_distribution_major_version == "8"
 
-- name: 'Use yum-config-manager to enable remi-php74'
+- name: 'Use yum-config-manager to enable remi-php74 - Centos 7'
   shell: yum-config-manager --enable remi-php74
+  when: ansible_distribution_major_version == "7"
+
+- name: 'Use dnf to enable php:remi-7.4 - Centos 8'
+  shell: dnf module enable php:remi-7.4 -y
+  when: ansible_distribution_major_version == "8"
 
 - name: 'Install php and required libraries'
   yum:
