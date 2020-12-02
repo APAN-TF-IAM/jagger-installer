@@ -1,4 +1,4 @@
-# JAGGER - Automated installation
+# jagger-installer
 
 This tool provides an automated installation of the [HEAnet Jagger (ResourceRegistry3)](https://jagger.heanet.ie/).
 The installation is based on the [JAGGER - Admin Guide Draft 1.0 documentation](https://jagger.heanet.ie/jaggerdocadmin/). It will install and configure all of supporting software (Apache, PHP, MariaDB, etc) and JAGGER itself ready for use by your federation or orgranisation.
