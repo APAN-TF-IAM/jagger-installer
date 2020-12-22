@@ -25,8 +25,8 @@
   shell: yum-config-manager --enable remi-php74
   when: ansible_distribution_major_version == "7"
 
-- name: 'Use dnf to enable php:remi-7.4 - Centos 8'
-  shell: dnf module enable php:remi-7.4 -y
+- name: 'Use dnf to enable php:remi-7.1 - Centos 8'
+  shell: dnf module enable php:remi-7.1 -y
   when: ansible_distribution_major_version == "8"
 
 - name: 'Install php and required libraries'
